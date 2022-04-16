@@ -5,15 +5,15 @@ package com.andreamazzon.session1.primenumbers;
  *
  * @author: Andrea Mazzon
  */
-public class Primes {
+public class PrimesTest {
 
 	public static void main(String[] args) {
-		int n = 25;
+		int numberToBeChecked = 25;
 
 		PrimesCheck checker = new PrimesCheck();
 
-		//boolean result = checker.checkIfPrime(n);
+		//boolean result = checker.checkIfPrime(numberToBeChecked);
 
-		//System.out.println("Is the number " + n + " prime? " + result);
+		//System.out.println("Is the number " +numberToBeCheckedn + " prime? " + result);
 	}
 }
