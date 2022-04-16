@@ -8,7 +8,8 @@ package com.andreamazzon.session1.gauss;
 public class SumOfIntegers {
 
 	/**
-	 * Compute the sum of natural numbers form 1 to lastNumber. As an extra, it also prints all those numbers.
+	 * Compute the sum of natural numbers form 1 to lastNumber, with a for loop. As an extra, it also prints
+	 * all those numbers.
 	 *
 	 * @param lastNumber: final number of the sum
 	 * @return the sum from 1 to lastNumber
@@ -21,5 +22,16 @@ public class SumOfIntegers {
 			sum += i; //sum = sum + i;
 		}
 		return sum;
+	}
+	
+	/**
+	 * Compute the sum of natural numbers form 1 to lastNumber, using Gauss formula. 
+	 *
+	 * @param lastNumber: final number of the sum
+	 * @return the sum from 1 to lastNumber
+	 */
+	public int sumUpToNumberWithGauss(int lastNumber) {
+		int sumWithGauss = lastNumber * (lastNumber + 1) / 2;
+		return sumWithGauss;	
 	}
 }

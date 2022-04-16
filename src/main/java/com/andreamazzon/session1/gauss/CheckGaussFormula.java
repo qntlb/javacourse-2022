@@ -6,7 +6,7 @@ package com.andreamazzon.session1.gauss;
  *
  * @author Andrea Mazzon
  */
-public class GaussFormula {
+public class CheckGaussFormula {
 
 	public static void main (String[] args) {
 
@@ -14,10 +14,11 @@ public class GaussFormula {
 
 		int lastNumber = 31;
 		int sum = sumOfIntegers.sumUpToNumber(lastNumber);//call of the method
-		int gaussSum = lastNumber * (lastNumber + 1) / 2;
+		int gaussSum = sumOfIntegers.sumUpToNumberWithGauss(lastNumber);
 
-		System.out.println("\n");
 		System.out.println("The sum of the first " + lastNumber + " numbers is " + sum);
-		System.out.println("Sum according to Gauss formula: " + gaussSum);
+		
+		System.out.println();
+		System.out.println("The sum of the first " + lastNumber + " numbers with Gauss formula is " + gaussSum);
 	}
 }
