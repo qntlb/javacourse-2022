@@ -21,6 +21,7 @@ public class Assignments {
 		tank2.level = 47;
 		// situation at the beginning:
 		System.out.println("1: tank1.level: " + tank1.level + ", tank2.level: " + tank2.level);
+		
 		tank1 = tank2;// tank1 and tank2 point to the same object!
 		System.out.println("2: tank1.level: " + tank1.level + ", tank2.level: " + tank2.level);
 
@@ -39,9 +40,9 @@ public class Assignments {
 		 * tank2 and tank3 do not point to the same object
 		 */
 		System.out.println("Is tank3 equal to tank2 ? " + (tank3 == tank2));// this is not true
-		System.out.println("Is the level of tank3 equal to the level of tank2 ? " + (tank3.level == tank2.level));// this
-		// is
-		// true
+		
+		//this is true
+		System.out.println("Is the level of tank3 equal to the level of tank2 ? " + (tank3.level == tank2.level));
 
 	}
 

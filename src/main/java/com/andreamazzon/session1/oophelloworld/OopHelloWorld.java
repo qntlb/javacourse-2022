@@ -45,6 +45,6 @@ public class OopHelloWorld {
 		String secondMessage = "Bye bye";
 
 		myMessage.printMessageWithArgument(firstMessage);
-		myOtherMessage.printMessageWithArgument(firstMessage);
+		myOtherMessage.printMessageWithArgument(secondMessage);
 	}
 }

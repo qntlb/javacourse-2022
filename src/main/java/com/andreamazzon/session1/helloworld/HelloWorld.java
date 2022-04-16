@@ -8,8 +8,7 @@ package com.andreamazzon.session1.helloworld;//first line: package your file bel
  */
 
 //note how a class is created: class keyword followed by the name. More about "public" in some time
-public class HelloWorld {// same name of the file! Otherwise the compiler would complain, because the
-	// class is public.
+public class HelloWorld {//same name of the file! Otherwise the compiler would complain, because the class is public.
 	// class body between brackets
 
 	// public, static: we will see the meaning later on
@@ -18,13 +17,17 @@ public class HelloWorld {// same name of the file! Otherwise the compiler would 
 		// special Java feature: String can be initialized with quoted text.
 		String myString = "Hello world!";// we create a String reference and we initialize it
 		// or:
-		// String myString2 = new String("Hello world!"); //typical way to construct
-		// objects: more about this later on
+		
+		// typical way to construct objects: more about this later on
+		// String myString2 = new String("Hello world!"); 
 
 		// it can also be done separately:
-		String myNewString; // creation of the string reference
-		// initialization. You get an error at running time if you try to us myNewString
-		// without initializing it
+		String myNewString; // declaration: creation of the string reference
+		
+		/*
+		 * Initialization: first time we assign a value. We get an error at running time if we 
+		 * try to us myNewString without having initialized it
+		 */
 		myNewString = "Hello again!";
 		System.out.println(myString); // we print the string inside parenthesis plus a new line.
 		/*

@@ -10,13 +10,14 @@ public class Operators {
 
 	public static void main(String[] args) {
 
-		// note: type declaration, and then variable assignment, through the operator
-		// "=".
-		int a = 5; // Since it is a primitive, a will contain the actual value and not the
-		// reference to an object.
+		// note: type declaration, and then variable assignment, through the operator "=".
+		int a = 5; 
+		//Since it is a primitive, a will contain the actual value and not the reference to an object.
 		System.out.println("The value of a is " + a);
-		int b = a; // if you say a = b for primitives, then the contents of b are copied into a
+		
+		int b = a; // if you say b = a for primitives, then the contents of a are copied into b
 		System.out.println("The value of b is " + b);
+		
 		b = 6; // you can modify b
 		System.out.println("The value of a is " + a);// and this does not affect a
 		System.out.println("The value of b is " + b);
@@ -36,7 +37,7 @@ public class Operators {
 		System.out.println("The difference between " + a + " and " + b + " is " + d);
 		int e = a * b;
 		System.out.println("The product of " + a + " and " + b + " is " + e);
-		double f = a / b; // result is 0
+		int f = a / b; // result is 0
 		System.out.println("The ratio of " + a + " and " + b + " is not " + f + ";");
 		// Note: Integer division truncates, rather than rounds, the result.
 		double g = a / (double) b; // a gets "upcasted", i.e., it is considered to be a double.
@@ -73,21 +74,36 @@ public class Operators {
 		System.out.println("a < 10 or b > 30: " + (a < 10 || b > 30));
 
 		System.out.println();
+		System.out.println();
 
 		// Increments and decrements
-		System.out.println("c: " + c);
-		System.out.println("e: " + e);
-		// an operator can change the value of an operand. This is called a side effect
-		System.out.println("++c: " + ++c);
-		System.out.println("--e: " + --e);
+		
+		int firstTestVariable = 5;
+		int secondTestVariable = 5;
+		System.out.println("first test variable: " + firstTestVariable);
+		System.out.println("second test variable: " + secondTestVariable);
+		
+		System.out.println();
+		
+		// an operator can change the value of an operand
+		System.out.println("++firstTestVariable: " + ++firstTestVariable);
+		System.out.println("--secondTestVariable: " + --secondTestVariable);
 
-		// c and e are equal to 12 and 29
-		System.out.println("c++: " + c++);
-		System.out.println("e--: " + e--);
+		System.out.println();
+		
+		// firstTestVariable and secondTestVariable are equal to 6 and 4
+		
+		System.out.println("firstTestVariable++: " + firstTestVariable++);
+		System.out.println("secondTestVariable--: " + secondTestVariable--);
 
-		// It appears to have stayed the same...but they are now 13 and 28
+		// It appears to have stayed the same...but they are now 7 and 5. Why?
 
-		System.out.println("++c :" + ++c);
-		System.out.println("--e :" + --e);
+		System.out.println();
+		
+
+		System.out.println("firstTestVariable: " + firstTestVariable);
+		System.out.println("secondTestVariable: " + secondTestVariable);
+		
+
 	}
 }

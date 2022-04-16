@@ -2,7 +2,7 @@ package com.andreamazzon.session1.testval;
 
 /**
  * In this class we choose three values and test if the first one lies inside
- * the interval defined by the first two. We use the class Comparison
+ * the interval defined by the other two. We use the class Comparison
  *
  * @author Andrea Mazzon
  */
@@ -21,7 +21,6 @@ public class Testing {
 
 		int isInsideAsInt = test.isInsideAsInt(testedNumber, leftEnd, rightEnd);
 		
-		System.out.println(
-				"The result of the test as an integer is: " + test.isInsideAsInt(testedNumber, leftEnd, rightEnd));
+		System.out.println("The result of the test as an integer is: " + isInsideAsInt);
 	}
 }

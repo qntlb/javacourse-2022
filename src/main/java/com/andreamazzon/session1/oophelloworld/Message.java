@@ -16,12 +16,16 @@ public class Message {
 	// modified");
 
 	/*
-	 * look at the definition of the method: void (it returns no object),name of the
+	 * Look at the definition of the method: void (it returns no object), name of the
 	 * method (first letter not capitalised, Java convention), argument list (in
 	 * this case no argument)
 	 */
-	void printMessage() {// this method prints the message contained in the string messageToBePrinted of
-		// the object
+	void printMessage() {
+	/*
+	 * This method prints the message contained in the string messageToBePrinted, which
+	 * is a field of the object: small and simple example of the interplay between methods
+	 * and fields
+	 */
 		System.out.println(messageToBePrinted);
 	}
 
