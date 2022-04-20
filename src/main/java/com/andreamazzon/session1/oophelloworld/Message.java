@@ -9,11 +9,10 @@ package com.andreamazzon.session1.oophelloworld;
  */
 public class Message {
 
-	String messageToBePrinted = "Standard message: it can be modified";
+	//String messageToBePrinted = "Standard message: it can be modified";
 
 	// or also:
-	// String messageToBePrinted = new String("Standard message: it can be
-	// modified");
+	String messageToBePrinted = new String("Standard message: it can be modified");
 
 	/*
 	 * Look at the definition of the method: void (it returns no object), name of the

@@ -25,8 +25,8 @@ public class OopHelloWorld {
 		myMessage.printMessage(); // see how a method is called
 		myOtherMessage.printMessage();
 
-		System.out.println("Hi world! " + myMessage.messageToBePrinted); // see how a
-		// field of an object is accessed
+		// see how a field of an object is accessed
+		System.out.println("Hi world! " + myMessage.messageToBePrinted); 
 
 		// we do the same with the other object
 		myOtherMessage.messageToBePrinted = "Hallo";
