@@ -14,8 +14,8 @@ package com.andreamazzon.session2.mortgages;
 public class Mortgage {
 
 	double loansSum = 0; // static: shared by all the objects. First equal to zero, for the first object.
-	// this field is not meant to be static: it is must be able to vary for every
-	// customer
+	
+	// this field is not meant to be static: it is must be able to vary for every customer
 	String name;
 	int age; // non static, for the same reason
 	double amount; // same thing
