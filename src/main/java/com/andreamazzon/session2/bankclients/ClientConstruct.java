@@ -21,12 +21,10 @@ public class ClientConstruct {
 		 * Then we can perform multiple calling.
 		 */
 		Client cristiano = Client.createNewClient("00011100").name("Cristiano Ronaldo").advisor("Smith")
-				.nationality("Portoguese").cityOfResidence("Turin").age(36).riskAversionIndex(0.0).sumInvested(1E7)
+				.nationality("Portoguese").cityOfResidence("Manchester").age(37).riskAversionIndex(0.0).sumInvested(1E7)
 				.hasInsurance(true);
 
 		cristiano.printName();
-		cristiano.printNationality();
-		
+		cristiano.printNationality();	
 	}
-
 }
