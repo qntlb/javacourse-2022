@@ -24,7 +24,7 @@ public class TreeMain {
 		 * not be practical to force the user to initialize it to its appropriate value
 		 * before the data is used. On the other hand, it’s unsafe to leave it with a
 		 * garbage value, so each primitive field of a class is guaranteed to get an
-		 * initial value. This is zero for int,long, float, double.
+		 * initial value
 		 */
 
 	}
