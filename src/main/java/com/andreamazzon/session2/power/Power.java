@@ -1,7 +1,7 @@
 package com.andreamazzon.session2.power;
 
 /**
- * This class gives an example of method overloadeding: computePower has two
+ * This class gives an example of method overloading: computePower has two
  * arguments, the base and the exponent. If the exponent is an int no problem,
  * we just print the result. If the exponent is a double, we can get problems if
  * the base is negative. If we just use Math.pow, we get NaN. Then we want to
