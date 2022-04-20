@@ -9,6 +9,12 @@ public class MainDivisible {
 
 	public static void main(String[] args) {
 
-		// your code here
-	}
+		CheckDivisible checker = new CheckDivisible();
+
+		
+		checker.dividend = 15;
+		checker.divisor = 3;
+
+		checker.check();	
+		}
 }
