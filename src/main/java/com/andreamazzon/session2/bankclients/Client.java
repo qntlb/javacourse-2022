@@ -60,12 +60,16 @@ public class Client {
 	}
 
 
+	/*
+	 * One could also call directly this constructor to construct an object. However, calling
+	 * the stating method below is a bit more elegant
+	 */
 	Client(String id) {
 		this.id = id;
 	}
 
 	/*
-	 * this method is static: it means that can be called without first creating an
+	 * This method is static: it means that can be called without first creating an
 	 * object of the class. Actually, this method has exactly the goal of
 	 * constructing an object of the class!
 	 */
@@ -74,7 +78,7 @@ public class Client {
 	}
 
 	/*
-	 * from here on you can see all these methods setting a value of a field of the
+	 * From here on you can see all these methods setting a value of a field of the
 	 * class and returning "this": in this way, the reference of the same object
 	 * calling the methods is returned, and we can have multiple callings. See the
 	 * main method of the class ClientConstruct.
