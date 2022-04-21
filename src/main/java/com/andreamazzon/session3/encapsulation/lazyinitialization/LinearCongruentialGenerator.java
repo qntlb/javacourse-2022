@@ -107,7 +107,7 @@ public class LinearCongruentialGenerator {
 	 *         numbers
 	 */
 	public long getModulus() {
-		return this.modulus;
+		return modulus;
 	}
 
 	/**
