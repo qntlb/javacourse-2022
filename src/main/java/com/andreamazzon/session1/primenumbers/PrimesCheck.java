@@ -8,5 +8,13 @@ package com.andreamazzon.session1.primenumbers;
  */
 public class PrimesCheck {
 
-	//your code here
+	boolean checkIfPrime(int numberToBeChecked) {
+		
+		for (int possibleDivisor = 2; possibleDivisor <= Math.sqrt(numberToBeChecked); possibleDivisor++) {
+			if (numberToBeChecked % possibleDivisor == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
