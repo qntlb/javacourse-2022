@@ -23,8 +23,8 @@ public class Power {
 	 * @param exponent
 	 */
 	void computePower(double base, int exponent) {
-		//your code here
-		//compute base to the power of exponent, assign the value to result, and print result
+		result = Math.pow(base, exponent);// note: Java method
+		System.out.println("Computing " + base + " to the power of " + exponent + ". The result is " + result);
 	}
 
 	/**
@@ -35,8 +35,14 @@ public class Power {
 	 * @param exponent
 	 */
 	void computePower(double base, double exponent) {
-		// your code here
-		//check if base is negative and exponent is a "true" double
-		//compute base to the power of exponent, assign the value to result, and print result
+		// we distinguish the two cases
+		if (base >= 0 || exponent == Math.floor(exponent)) {
+			result = Math.pow(base, exponent);
+			System.out.println("Computing " + base + " to the power of " + exponent + ". The result is " + result);
+		} else {
+			// we warn the user!
+			System.out.println("Computing " + base + " to the power of " + exponent
+					+ ". You get a complex number: is that what you want?");
+		}
 	}
 }
