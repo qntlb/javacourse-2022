@@ -24,6 +24,7 @@ public class Power {
 	 */
 	void computePower(double base, int exponent) {
 		//your code here
+		//compute base to the power of exponent, assign the value to result, and print result
 	}
 
 	/**
@@ -35,5 +36,7 @@ public class Power {
 	 */
 	void computePower(double base, double exponent) {
 		// your code here
+		//check if base is negative and exponent is a "true" double
+		//compute base to the power of exponent, assign the value to result, and print result
 	}
 }

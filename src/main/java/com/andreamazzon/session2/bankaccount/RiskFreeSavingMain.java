@@ -21,6 +21,8 @@ public class RiskFreeSavingMain {
 		RiskFreeSaving savingWithCommission = new RiskFreeSaving(annualRiskFreeRate, commission);
 		// the overloaded version, where we don't
 		RiskFreeSaving savingWithoutCommission = new RiskFreeSaving(annualRiskFreeRate);
+		
+		RiskFreeSaving saving = new RiskFreeSaving();
 
 		/*
 		 * note that here you have two methods with same value of the arguments, but
@@ -28,11 +30,15 @@ public class RiskFreeSavingMain {
 		 */
 		double valueWithCommission = savingWithCommission.getMoney(initialInvestment, numberOfYears);
 		double valueWithoutCommission = savingWithoutCommission.getMoney(initialInvestment, numberOfYears);
-
+		double valueWithoutCommissionAndInterestRate = saving.getMoney(initialInvestment, numberOfYears);
 		System.out.println("The value of the money after " + numberOfYears + " years when there is a commission of "
 				+ commission + " is " + valueWithCommission);
 		System.out.println("The value of the money after " + numberOfYears + " years when there is no commission is "
 				+ valueWithoutCommission);
+		System.out.println("The value of the money after " + numberOfYears + " years when there is no commission is "
+				+ valueWithoutCommissionAndInterestRate);
+		
+		
 
 	}
 }

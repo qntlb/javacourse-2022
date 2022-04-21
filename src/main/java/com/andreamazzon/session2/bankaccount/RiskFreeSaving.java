@@ -35,6 +35,10 @@ public class RiskFreeSaving {
 		commission = 0;
 	}
 
+	public RiskFreeSaving() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * This methods returns how much money one gets after a given number of years
 	 * after investing an initial amount, with a given annual risk free rate and a

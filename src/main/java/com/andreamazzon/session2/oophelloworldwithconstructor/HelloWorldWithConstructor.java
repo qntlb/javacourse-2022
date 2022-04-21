@@ -20,6 +20,8 @@ public class HelloWorldWithConstructor {
 		myMessage.messageToBePrinted = "Good morning!";// see how a field of an object is manipulated
 		myMessage.printMessage(); // see how a method is called
 
+		System.out.println();
+		
 		MessageWithConstructor myOtherMessage = new MessageWithConstructor();
 		myOtherMessage.printMessageWithArgument("Good evening!");
 	}

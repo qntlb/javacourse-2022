@@ -41,8 +41,7 @@ public class MessageWithOverloading {
 	 * method (first letter not capitalised, Java convention), argument list (in
 	 * this case no argument)
 	 */
-	void printMessage() {// this method prints the message contained in the string messageToBePrinted of
-							// the object
+	void printMessage() {// this method prints the message contained in the string messageToBePrinted of the object
 		System.out.println(messageToBePrinted);
 	}
 

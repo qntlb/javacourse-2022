@@ -19,6 +19,7 @@ public class PerimeterMain {
 
 		double perimeterScaleneTriangle = perimeterCalculator.computePerimeter(lengthFirstSide, lengthSecondSide,
 				lengthThirdSide);
+		
 		System.out.println("The perimeter of the scalene triangle is " + perimeterScaleneTriangle);
 
 		double lengthSideEquilaterTriangle = lengthFirstSide;

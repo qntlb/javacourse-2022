@@ -17,7 +17,7 @@ public class MainDivisibleConstructor {
 		CheckDivisibleWithConstructor checkDivisible = new CheckDivisibleWithConstructor(dividend, divisor);
 		checkDivisible.check(); //call of the method
 
-		CheckDivisibleWithConstructor secondCheckDivisible = new CheckDivisibleWithConstructor(1, 1);
+		CheckDivisibleWithConstructor secondCheckDivisible = new CheckDivisibleWithConstructor(3, 2);
 		secondCheckDivisible.check(); // call of the method
 
 	}
