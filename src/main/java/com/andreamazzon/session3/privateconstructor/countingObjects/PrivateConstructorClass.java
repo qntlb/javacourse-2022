@@ -29,7 +29,7 @@ public class PrivateConstructorClass{
 	 * not the data stored in the object
 	 */
 	public static PrivateConstructorClass CreateOneObject() {
-		if (howManyObjects < 1) {
+		if (howManyObjects < 2) {
 			howManyObjects ++;
 			PrivateConstructorClass newObject = new PrivateConstructorClass();
 			//the constructor can of course be accessed from inside the class

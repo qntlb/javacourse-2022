@@ -34,7 +34,7 @@ public class Mortgage {
 	}
 	
 	/**
-	 * It returns an object of type Mortgage if the former value of totalCost plus cost is less or equal than
+	 * It returns an object of type Mortgage if the former value of loansSum plus amount is less or equal than
 	 * maximumBudget.
 	 *
 	 * @param name, the name of the new client

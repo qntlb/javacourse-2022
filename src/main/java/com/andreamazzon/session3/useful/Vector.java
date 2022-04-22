@@ -1,10 +1,5 @@
 package com.andreamazzon.session3.useful;
 
-/*
- * import static: allows members (fields and methods) which have been "defined" as public static,
- * to be used without specifying the class in which the field has been defined.
- */
-import static com.andreamazzon.session3.useful.Print.print;
 
 /**
  * This class illustrates the use of "import static", see above, and is defined in order to show what
@@ -15,6 +10,6 @@ import static com.andreamazzon.session3.useful.Print.print;
  */
 public class Vector{
 	public Vector(){
-		print("Vector, my definition");
+		Print.print("Vector, my definition");
 	}
 }

@@ -13,6 +13,7 @@ import static com.andreamazzon.session3.useful.Print.printn;
  *
  */
 public class AccessTest {
+	
 	public static void main(String[] args) {
 		
 		Access access = new Access();

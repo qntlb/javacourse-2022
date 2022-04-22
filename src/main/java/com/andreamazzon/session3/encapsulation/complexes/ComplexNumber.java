@@ -99,8 +99,15 @@ public class ComplexNumber {
 		 * The sum is more conveniently computed in Cartesian coordinates. We get the real and imaginary part of both the
 		 * numbers and sum
 		 */
-		return setComplexNumber(complexNumber.getRealPart() + getRealPart(),
-				complexNumber.getImaginaryPart() + getImaginaryPart());
+		
+		double realPartMyComplexNumber = getRealPart();
+		double realPartOtherComplexNumber = complexNumber.getRealPart();
+		
+		double imaginaryPartMyComplexNumber = getImaginaryPart();
+		double imaginaryPartOtherComplexNumber = complexNumber.getImaginaryPart();
+		
+		return setComplexNumber(realPartMyComplexNumber + realPartOtherComplexNumber,
+				imaginaryPartMyComplexNumber + imaginaryPartOtherComplexNumber);
 	}
 
 	/**
@@ -108,8 +115,14 @@ public class ComplexNumber {
 	 * @return the product of c and the complex number represented by the object calling the method
 	 */
 	public ComplexNumber product(ComplexNumber complexNumber){
+		double radiusOfMyComplexNumber = r;
+		double radiusOfGivenComplexNumber = complexNumber.r;
+		
+		double angleOfMyComplexNumber = theta;
+		double angleOfGivenComplexNumber = complexNumber.theta;
 		//the product is more efficiently computed in polar coordinates!
-		return new ComplexNumber(r * complexNumber.r, theta + complexNumber.theta);
+		return new ComplexNumber(radiusOfMyComplexNumber * radiusOfGivenComplexNumber, 
+				angleOfMyComplexNumber + angleOfGivenComplexNumber);
 	}
 
 	/*
@@ -130,7 +143,7 @@ public class ComplexNumber {
 	 */
 	public void show(){//a + b i
 		if (getImaginaryPart() !=0.0){
-			print(getRealPart() + " " + imaginarySign() //gets the right sign  BEFORE the imaginary unit!
+			print(this.getRealPart() + " " + imaginarySign() //gets the right sign  BEFORE the imaginary unit!
 			+ Math.abs(getImaginaryPart()) + " i ");
 		}
 		else {

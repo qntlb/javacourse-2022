@@ -37,6 +37,7 @@ public class Access {
 	 */
 	void packageAccessMethod(){
 		printn("A package access method");
+		privateMethod();
 	}
 
 	private void privateMethod(){ //private: can be called only from inside the class

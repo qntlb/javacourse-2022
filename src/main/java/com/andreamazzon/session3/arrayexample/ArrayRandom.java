@@ -11,11 +11,12 @@ import java.util.Random;
  *
  */
 public class ArrayRandom {
+	
 	public static void main(String[] args){
 
-		Random rand = new Random(); //random numbers generator
+		Random randomProducer = new Random(); //random numbers generator
 
-		int length = rand.nextInt(20); //(pseudo)random integer between 0 and 19
+		int length = randomProducer.nextInt(20); //(pseudo)random integer between 0 and 19
 
 		int[] arrayToBeFilled = new int[length];
 		//or:
@@ -42,13 +43,13 @@ public class ArrayRandom {
 		//note: int i=0; i<arrayToBeFilled.length: the first element is a[0]
 		for(int i = 0; i < arrayToBeFilled.length; i++) {
 			//you cannot go out of bounds: you would get a runtime error
-			arrayToBeFilled[i] = rand.nextInt(500);  //(pseudo)random integer between 0 and 499
+			arrayToBeFilled[i] = randomProducer.nextInt(500);  //(pseudo)random integer between 0 and 499
 		}
 
 		System.out.println("The array is now " + Arrays.toString(arrayToBeFilled));
 		System.out.println();
-		int[] otherArray;// Creation of the array reference (declaration)
 		
+		int[] otherArray;// Creation of the array reference (declaration)	
 		otherArray = new int[10];//..and then initialization
 
 		int[] firstArray = {1, 2, 3, 4, 5, 6, 7};//another way to initialize an array
@@ -59,8 +60,8 @@ public class ArrayRandom {
 		System.out.println("secondArray is " + Arrays.toString(secondArray));
 		System.out.println();
 		firstArray[2]=7;//I modify firstArray. Note: firstArray[2] is the THIRD element of the array!
-
-		//arrays are objects! when we write firstArray = secondArray they have the same reference
+//
+//		//arrays are objects! when we write firstArray = secondArray they have the same reference
 		System.out.println("firstArray is now " + Arrays.toString(firstArray));
 		System.out.println("secondArray is now " + Arrays.toString(secondArray));
 		System.out.println();

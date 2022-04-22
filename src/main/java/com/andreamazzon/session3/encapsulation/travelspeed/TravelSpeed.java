@@ -31,6 +31,7 @@ public class TravelSpeed {
 	 * change the own code.
 	 */
 	private double time;
+	
 
 	/*
 	 * static: the same value is shared for every object, and final: cannot be
