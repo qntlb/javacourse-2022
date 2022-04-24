@@ -23,16 +23,19 @@ public class TestClass {
 		BinomialModelSimulator tester = new BinomialModelSimulator(initialValue, increaseIfUp, decreaseIfDown, interestRate, seed,
 				lastTime, numberOfSimulations);
 
-		System.out.println("Path for simulation " + simulationIndex + ":");
+		System.out.println("Path for simulation number " + simulationIndex + ":");
 		tester.printPath(simulationIndex);
 
+		System.out.println();
+		
 		double finalAverage = tester.getAverageAtGivenTime(lastTime);
 
 		System.out.println("Average of the process at time " + lastTime + ": " + finalAverage);
 
+		System.out.println();
+		
 		double discountFactor = Math.pow(1+interestRate, -lastTime);
 		double discountedAverage = discountFactor * finalAverage;
-		System.out.println("Average of the process at time " + lastTime + ": " + discountedAverage);
-
+		System.out.println("Average of the discounted process at time " + lastTime + ": " + discountedAverage);
 	}
 }

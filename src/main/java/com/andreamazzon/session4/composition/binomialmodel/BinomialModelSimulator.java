@@ -4,18 +4,21 @@ import com.andreamazzon.session3.encapsulation.lazyinitialization.LinearCongruen
 import com.andreamazzon.session4.usefulmatrices.UsefulMethodsMatricesVectors;
 
 /**
- * This class is used in order to simulate some paths of a binomial model:
- * discrete model for a stochastic process S, such that every time i we have
- * S(i+1)=S(i)*M(i), where M(i)=u>1 with probability p and M(i)=d<1 with
- * probability 1-p. This is done under the risk neutral measure: it can be seen
- * that it must hold p=(1 + r - d)/(u - d), where r is the risk free interest
- * rate. This serves as an example of composition: the class has an object of
+ * This class is used in order to simulate some paths of a binomial model, get 
+ * the value of the process at given times and for some paths and to compute
+ * the average at some times. The binomial model is a discrete model for a
+ * stochastic process S, such that every time i we have S(i+1)=S(i)*M(i),
+ * where M(i)=u>1 with probability p and M(i)=d<1 with probability 1-p. 
+ * This is done under the risk neutral measure: it can be seen that it must hold
+ * p=(1 + r - d)/(u - d), where r is the risk free interest rate.
+ * This serves as an example of composition: the class has an object of
  * type LinearCongruentialGenerator, which is used to generate the realizations
- * M(i). Also note that everything is private except the method
- * getRealizations(), which returns a matrix whose rows are all the simulation
- * for a fixed time and the columns are the paths for a given simulation. The
- * realizations of a row are realizations of a random variable. We will see how
- * a random variable can be implemented in the Finmath library.
+ * M(i). Also note that methods used to generate the process are private.
+ * We have instead public methods that provide the user with data one can be
+ * interested about: for example, the method getRealizations() returns a matrix
+ * whose rows are all the simulations for a fixed time and the columns are the paths
+ * for a given simulation. The realizations of a row are realizations of a random
+ * variable. We will see how a random variable can be implemented in the Finmath library.
  *
  */
 //S[i][j]=S(i,omega(j))
@@ -129,10 +132,10 @@ public class BinomialModelSimulator {
 	 */
 	public double[] getRealizationsAtGivenTime(int time) {
 		// lazy initialization: realizations are generated only when needed
-				if (realizations == null) {// moreover, we generate them only once
-					generateRealizations();
-				}
-				return UsefulMethodsMatricesVectors.getRow(realizations, time);
+		if (realizations == null) {// moreover, we generate them only once
+			generateRealizations();
+		}
+		return UsefulMethodsMatricesVectors.getRow(realizations, time);
 	}
 
 	/**
@@ -150,7 +153,10 @@ public class BinomialModelSimulator {
 	 * @return the path of S for the specific simulation index
 	 */
 	public double[] getPath(int simulationIndex) {
-		generateRealizations();// realizations generated only when needed: lazy initialization
+		// lazy initialization: realizations are generated only when needed
+		if (realizations == null) {// moreover, we generate them only once
+			generateRealizations();
+		}
 		return UsefulMethodsMatricesVectors.getColumn(realizations, simulationIndex);
 	}
 
