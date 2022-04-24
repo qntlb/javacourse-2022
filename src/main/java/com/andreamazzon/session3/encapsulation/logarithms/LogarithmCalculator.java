@@ -23,7 +23,7 @@ public class LogarithmCalculator {
 	// getter
 	public double getNumber() {
 		//your code here
-		return 0;
+		return number;
 	}
 
 	/*
@@ -32,7 +32,11 @@ public class LogarithmCalculator {
 	 *
 	 */
 	public void setNumber(double number) {
-		//your code here
+		if (number > 0) {// controls if the value is positive!
+			this.number = number; // note the use of this
+		} else {
+			Print.printn("This has to be a positive number!");
+		}
 	}
 
 	// method that computes the logarithm
