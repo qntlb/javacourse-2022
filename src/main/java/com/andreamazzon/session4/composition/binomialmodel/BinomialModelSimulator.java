@@ -1,6 +1,7 @@
 package com.andreamazzon.session4.composition.binomialmodel;
 
 import com.andreamazzon.session3.encapsulation.lazyinitialization.LinearCongruentialGenerator;
+import com.andreamazzon.session4.usefulmatrices.UsefulMethodsMatricesVectors;
 
 /**
  * This class is used in order to simulate some paths of a binomial model:
@@ -120,5 +121,54 @@ public class BinomialModelSimulator {
 			generateRealizations();
 		}
 		return realizations;
+	}
+	
+	/**
+	 * @param time, the time i such that the simulated values of S(i) are returned
+	 * @return the simulated values of S at time time.
+	 */
+	public double[] getRealizationsAtGivenTime(int time) {
+		// lazy initialization: realizations are generated only when needed
+				if (realizations == null) {// moreover, we generate them only once
+					generateRealizations();
+				}
+				return UsefulMethodsMatricesVectors.getRow(realizations, time);
+	}
+
+	/**
+	 * It prints the vector of realizations at time time.
+	 *
+	 * @param time, the time i such that the simulated values of S(i) are printed
+	 */
+	public void printRealizationsAtGivenTime(int time) {
+		UsefulMethodsMatricesVectors.printVector(getRealizationsAtGivenTime(time));
+	}
+
+	/**
+	 * @param simulationIndex, the index of the simulation for which the path is
+	 *                         returned
+	 * @return the path of S for the specific simulation index
+	 */
+	public double[] getPath(int simulationIndex) {
+		generateRealizations();// realizations generated only when needed: lazy initialization
+		return UsefulMethodsMatricesVectors.getColumn(realizations, simulationIndex);
+	}
+
+	/**
+	 * it prints the path of S for the specific simulation index
+	 *
+	 * @param simulationIndex, the index of the simulation for which the path is
+	 *                         returned
+	 */
+	public void printPath(int simulationIndex) {
+		UsefulMethodsMatricesVectors.printVector(getPath(simulationIndex));
+	}
+
+	/**
+	 * @param time, the time i such that the simulated values of S(i) are returned
+	 * @return the average of S at time time.
+	 */
+	public double getAverageAtGivenTime(int time) {
+		return UsefulMethodsMatricesVectors.getAverage(getRealizationsAtGivenTime(time));
 	}
 }
