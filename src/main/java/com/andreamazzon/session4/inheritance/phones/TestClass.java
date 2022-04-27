@@ -21,7 +21,7 @@ public class TestClass {
 		normalPhone.checkIfSmartphone();
 		printn();
 		printn();
-		// normalPhone.goOnInternet();//error! this is a method of the derived class only
+		//normalPhone.goOnInternet();//error! this is a method of the derived class only
 
 		printn("Then the derived class:");
 		printn();

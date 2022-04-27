@@ -28,8 +28,9 @@ public class Smartphone extends Phone {
 		call();
 	}	
 	
-//	@Override
-//	protected void call() {
-//		printn("I also have the possibility to video call"); 
-//	}
+	@Override
+	protected void call() {
+		super.call();
+		printn("I also have the possibility to video call"); 
+	}
 }
